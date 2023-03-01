@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        console.log("----Kintamieji----");
+        // ---------Kintamieji--------//
+        vardas = "Enrika"
+        pavarde = "Bernotaite"
+        //    ju atvaizdavimas consoleje//
+        console.log(vardas);
+        console.log(pavarde);
+
+        //    -----Kintamuju tipai----//        
+
+        let sakicius = 17;
+        var sk2 = 30;
+        const PI = 3.14;
+
+        console.log(PI);
+
+        let manoVardas = "Elanas"
+        console.log(manoVardas);
+        manoVardas = "Jonas"
+        console.log(manoVardas);
+
+        console.log(3 + 5 + " yra 8");
+        console.log("astuoni gaunasi sudejus" + 3 + 8);
+        console.log("astuoni gaunasi sudejus" + (3 + 8));
+
+        console.log("Labas " + " rytas ");
+
+        let num = 12;
+        console.log(num);
+        num = 22;
+        console.log(num);
+        num = 32;
+        console.log(num);
+        num = 32;
+        console.log(num);
+        num = 32;
+        console.log(num);
+
+        //----Salyginiai sakiniai----/
+        console.log("----salyginiai sakiniai----");
+        // kodo uzrasymo fragmentas //
+
+        if (5 > 3) {
+            console.log("teiginys");
+            console.log("yra");
+            console.log("teisingas");
+        } else {
+            console.log("teiginys");
+            console.log("Nera");
+            console.log("teisingas");
+        }
+
+        if (5 < 3) {
+            console.log("teiginys");
+            console.log("yra");
+            console.log("teisingas");
+        } else {
+            console.log("teiginys");
+            console.log("Nera");
+            console.log("teisingas");
+        }
+
+        // kodo optimizavimas//
+        console.log("teiginys");
+        if (5 > 3) {
+            console.log("yra");
+        } else {
+            console.log("nera");
+        }
+        console.log("teisingas");
+        //kodo optimizavimo pabaiga//
+
+        // abu teiginiai teisingi  tada salyga -teisinga ( && ir) //
+        if (5 < 7 && 14 > 10) {
+            console.log("abu teisiniai teisingi");
+        }
+
+        //   || arba  //
+        if (5 < 7 || 14 < 10) {
+            console.log("bent vienas teiginys yra teisingas");
+        }
+
+
+        //priskyrimas (kintamasis 5 lygu reiksmei 5//
+        // if (5 = "5"){
+        //    console.log("lygu"); 
+        // }
+
+        //lyginimas (ar kaire puse lygi desinei arba 5 lygu 5-iem) lygu lygu nera grieztas palyginimas t.y jis palygins reiksme//
+        if (5 == "5") {
+            console.log("lygu");
+        }
+
+        //  palygins ne tik reiksme bet ir duomens tipa //
+        // if (5 === "5"){
+        //     console.log("lygu");
+        // }
+
+        //  Random generavimas JavaScript Random generuoja skaicius nuo 0 iki 1 (vienas jau nebeitraukiamas) //
+
+        console.log("----skaiciu generavimas----");
+
+        console.log(Math.random());
+        console.log(Math.random());
+        console.log(Math.random());
+        console.log(Math.random());
+        console.log(Math.random());
+
+        console.log(Math.random() * 10);
+        console.log(Math.random() * 10);
+        console.log(Math.random() * 10);
+        console.log(Math.random() * 10);
+        console.log(Math.random() * 10);
+
+        // sveiko skaiciaus apvalinimas nuo 0.4 apvalina i apacia , o nuo 0.6 i virsu iki vieno //
+
+        Math.round(0.61891981891)
+        console.log(Math.round(0.41891981891));
+        console.log(Math.round(0.61891981891));
+        //apvalina i apacia//
+        console.log(Math.floor(0.61891981891));
+        //apvalina i virsu ceil-lubos //
+        console.log(Math.ceil(0.61891981891));
+        console.log(Math.ceil(0.11891981891));
+
+        console.log("---------");
+
+        // jei reikia atsitiktinio skaicio iki 0 iki 0.999  pvz 0 * 10 = 0, 0.999 * 10 = 9.99//
+        // console.log(Math.random () * 10 );
+
+        // jei naudosiu round funcija man suapvalins maziausia skaiciu iki 0, o diziausia skaiciu iki 10 //
+        // sugeneruoja atsistiktini skaiciu//
+
+        // console.log(Math.random()); //pvz 0.48607061849294464//
+        // let rnd = Math.random(); 
+        // sugeneruota random skaiciu * 10
+        // console.log(rnd * 10);
+        // console.log(rnd * 10);
+        // console.log(rnd * 10);
+        // pvz console.log( 0.48607061849294464 * 10);
+
+        console.log("---pvz sveiko skaiciaus generavimas nuo 0 iki 10---");
+
+
+        let rnd = Math.random();//0.1156241207270667//
+        console.log(rnd);
+        console.log(rnd * 10);//1.156241207270667//
+        console.log(Math.round(rnd * 10));//suapvalino iki sveiko skaiciaus//
+
+
+        console.log(" ----sveiko skaiciaus generavimas nuo  nuo 5 iki 15 -----");
+        //Sukurkite 4 kintamuosius, kurie saugotų jūsų vardą, pavardę, gimimo metus ir šiuos metus (nebūtinai tikrus). Parašykite kodą, kuris pagal gimimo metus paskaičiuotų jūsų amžių ir naudodamas vardo ir pavardės kintamuosius atspausdintų tokį sakinį :
+
+
+        let min = 3;
+        let max = 12;
+        let result = min + (Math.round(Math.random() * (max - min)));
+        console.log(result);
+
+
+
+        console.log("--1 uzduotis--");
+        let name = "Jovita"
+        let surName = "Bernotienė"
+        let birthYear = "1990"
+        let curentYear = "2023"
+
+        console.log("Aš esu " + name + " " + surName + ". Man yra " + (curentYear - birthYear) + " metai.");
+
+
+
+        console.log("----2 uzduotis---");
+        //Naudokite funkcija Math.random(). Sukurkite du kintamuosius ir naudodamiesi funkcija Math.random() jiems priskirkite atsitiktines reikšmes nuo 0 iki 4. Didesnę reikšmę padalinkite iš mažesnės. Atspausdinkite rezultatą jį suapvalinę iki 2 skaičių po kablelio.
+
+
+        let num1 = Math.round(Math.random() * 4);  //3.864866; 3
+        let num2 = Math.round(Math.random() * 4); // 2.98498153; 4
+
+        console.log(num1, num2);
+
+        if (num1 != 0 && num2 != 0) {
+            if (num1 > num2) {
+                console.log(Math.round(num1 / num2 * 100) / 100);
+            } else {
+                console.log(Math.round(num2 / num1 * 100) / 100);
+            }
+        } else {
+            console.log("dalyba is nulio negalima");
+        }
+
+
+
+
+        console.log("----3 uzduotis----");
+        //Naudokite funkcija Math.random(). Sukurkite tris kintamuosius ir naudodamiesi funkcija Math.random() jiems priskirkite atsitiktines reikšmes nuo 0 iki 25. Raskite ir atspausdinkite kintąmąjį turintį vidurinę reikšmę.
+
+
+        let n1 = Math.round(Math.random() * 25); //17  17
+        let n2 = Math.round(Math.random() * 25);//10  20
+        let n3 = Math.round(Math.random() * 25);//20  10
+
+        console.log(n1, n2, n3);
+        // let rezult = ((n1 + n2 + n3) / 3)
+        // console.log(result);
+
+        //17  > 10 ir 17 < 20
+        if ((n1 > n2 && n1 < n3) || (n1 < n2 && n1 > n3)) {
+            console.log(n1);
+        }
+
+        if ((n2 > n1 && n2 < n3) || (n2 < n1 && n2 > n3)) {
+            console.log(n2);
+        }
+
+        if ((n3 > n2 && n3 < n1) || (n3 < n2 && n3 > n1)) {
+            console.log(n3);
+        }
+
+
+        // if ((n1 < n2 && n2 < n3) || (n3 < n2 && n2 < n1)) {
+        //     console.log(n2);
+
+        // } else if ((n2 < n1 && n1 < n3) || (n3 < n1 && n1 < n2)) {
+
+        //     console.log(n1);
+        // } else {
+        //     console.log(n3);
+
+        // }
+
+        console.log("---4 uzduotis---");
+        //Įvedami skaičiai - a, b, c –kraštinių ilgiai, trys kintamieji (naudokite ​Math.random()​ funkcija nuo 1 iki 10). Parašykite JavaScript programą, kuri nustatytų, ar galima sudaryti trikampį ir atsakymą atspausdintų. 
+
+
+        let sidea = 1 + Math.round(Math.random() * (10 - 1));
+        let sideb = 1 + Math.round(Math.random() * (10 - 1));
+        let sidec = 1 + Math.round(Math.random() * (10 - 1));
+        console.log(sidea, sideb, sidec);
+
+
+        // if (sidea == sideb && sideb == sidec) {
+        //     console.log("TRIANGLE");
+        // } else {
+        //     console.log("NOT TRIANGLE");
+        // }
+
+        if (sidea + sideb > sidec && sidea + sidec > sideb && sideb + sidec > sidea) {
+            console.log("Trikampis galimas");
+        } else {
+            console.log("Trikampis negalimas");
+        }
+
+
+        console.log("----5 uzduotis----");
+///Sukurkite keturis kintamuosius ir ​Math.random()​ funkcija sugeneruokite jiems reikšmes nuo 0 iki 2. Suskaičiuokite kiek yra nulių, vienetų ir dvejetų. (sprendimui masyvo nenaudoti).
+
+        // pvz//
+        let count7 = 7;
+        console.log(count7);
+        count7++;
+        count7++;
+        count7++;
+        console.log(count7);
+        // pvz pabaiga//
+
+        let numb1 = Math.round(Math.random() * 2);
+        let numb2 = Math.round(Math.random() * 2);
+        let numb3 = Math.round(Math.random() * 2);
+        let numb4 = Math.round(Math.random() * 2);
+        console.log(numb1, numb2, numb3, numb4);
+        let count0 = 0;
+        let count1 = 0;
+        let count2 = 0;
+
+        if (numb1 == 0) {
+            // console.log("nulis");
+            count0++;
+        }
+
+        if (numb2 == 0) {
+            count0++;
+        }
+
+        if (numb3 == 0) {
+            count0++;
+        }
+
+        if (numb4 == 0) {
+            count0++;
+        }
+
+        if (numb1 == 1) {
+            count1++;
+        }
+        if (numb2 == 1) {
+            count1++;
+        }
+        if (numb3 == 1) {
+            count1++;
+        }
+        if (numb4 == 1) {
+            count1++;
+        }
+
+        if (numb1 == 2) {
+            count2++;
+        }
+        if (numb2 == 2) {
+            count2++;
+        }
+        if (numb3 == 2) {
+            count2++;
+        }
+        if (numb4 == 2) {
+            count2++;
+        }
+        console.log(count0, count1, count2);
+        // atvaizdavimo paaiskinimas//
+        console.log("nuliu radome" + count0);
+        console.log("vienetu radome" + count1);
+        console.log("dvejetu radome" + count2);
+
+
+        console.log("----- 6 uzduotis ----");
+
+        //Naudokite funkcija Math.random(). Atspausdinkite 3 skaičius nuo -10 iki 10. Skaičiai mažesni už 0 turi būti  laužtiniuose skliaustuose [], 0 -  (), didesni už 0 {}. 
+
+        let minimum = -10;
+        let maximum = 10;
+        let num10= minimum + Math.round(Math.random() * (maximum - minimum));
+        let num11= minimum + Math.round(Math.random() * (maximum - minimum));
+        let num12= minimum + Math.round(Math.random() * (maximum - minimum));
+
+        if (num10 < 0) {
+            console.log("[" + num10 + "]");    
+        }
+        if (num10 == 0) {
+            console.log("(" + num10 + ")");    
+        }
+        if (num10 > 0) {
+            console.log("{" + num10 + "}");    
+        }
+
+        if (num11 < 0) {
+            console.log("[" + num11 + "]");    
+        }
+        if (num11 == 0) {
+            console.log("(" + num11 + ")");    
+        }
+        if (num11 > 0) {
+            console.log("{" + num11 + "}");    
+        }
+
+        if (num12 < 0) {
+            console.log("[" + num12 + "]");    
+        }
+        if (num12 == 0) {
+            console.log("(" + num12 + ")");    
+        }
+        if (num12 > 0) {
+            console.log("{" + num12 + "}");    
+        }
+
+        // rezultato atvaizdavimas eiluteje//
+
+        let sting10 = 0;
+
+        if (num10 < 0) {
+           sting10 += "[" + num10 + "]";    
+        }
+        if (num10 == 0) {
+            sting10 += "(" + num10 + ")";    
+        }
+        if (num10 > 0) {
+            sting10 += "{" + num10 + "}";  
+        }
+
+        if (num11 < 0) {
+            sting10 += "[" + num11 + "]";    
+        }
+        if (num11 == 0) {
+            sting10 += "(" + num11 + ")";               
+              
+        }
+        if (num11 > 0) {
+            sting10 += "{" + num11 + "}";   
+        }
+
+        if (num12 < 0) {
+            sting10 += "[" + num12 + "]";  
+        }
+        if (num12 == 0) {
+            sting10 += "(" + num12 + ")";    
+        }
+        if (num12 > 0) {
+            sting10 += "{" + num12 + "}";
+        }
+        console.log(sting10);
+        console.log("----- 7 uzduotis galimas sprendimas, bet 7.1 tinkamesnis-----");
+
+        let price = 1.00;
+        // let skaicius = Math.round(Math.random());
+        // console.log(skaicius);
+        let quantity = 5 + Math.round(Math.random() * (3000 - 5));
+        // console.log(quantity);
+
+        let total = quantity * price;
+        console.log(total);
+
+        let discount1 = total - (total * 3 / 100);
+        console.log(discount1);
+
+        let discount2 = (Math.round(Math.random() * 4) / 100)
+        console.log(discount2);
+
+        if (quantity <= 1000) {
+            console.log(quantity);
+        }
+
+        if (quantity > 1000 && quantity <= 2000) {
+            console.log(discout1);
+        }
+        if (quantity > 3000) {
+            console.log(discount2);
+        }
+ 
+    console.log( "----7 uzduoties tinkamas sprendimas");
+    //Įmonė parduoda žvakes po 1 EUR. Perkant daugiau kaip už 1000 EUR taikoma 3 % nuolaida, daugiau kaip už 2000 EUR - 4 % nuolaida. Parašykite programą, kuri skaičiuos žvakių kainą ir atspausdintų 
+    
+    let kiekis = 5 + Math.round(Math.random() * (3000 - 5));
+        console.log(kiekis);
+        if (kiekis > 1000 && kiekis < 2000) {
+            console.log(kiekis - ( kiekis * 3/100));
+            // console.log(kiekis * 0.97); 
+        }
+        if (kiekis > 2000) {
+            console.log(kiekis - ( kiekis * 4/100));
+            // console.log(kiekis * 0.96);   
+        }
+        if (kiekis < 1000) {
+            console.log(kiekis);   
+        }
+    </script>
+
+
+
+</body>
+
+</html>
